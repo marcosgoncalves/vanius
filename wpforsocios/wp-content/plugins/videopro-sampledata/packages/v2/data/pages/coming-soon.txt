@@ -1,0 +1,9 @@
+<p><img class="alignnone size-full wp-image-3039 aligncenter" src="http://test.cactusthemes.com/video-pro/wp-content/uploads/2016/01/logo-comming.png" alt="logo-comming" width="66" height="66" /></p>
+<p>&nbsp;</p>
+<h1 style="text-align: center;">We are coming soon!</h1>
+<p>&nbsp;</p>
+<p style="text-align: center;">[ct_timer years="2017" years_text="YEARS" months="10" months_text="MONTHS" days="10" days_text="DAYS" hours="10" hours_text="HOURS" minutes="10" minutes_text="MINUTES" seconds="10" seconds_text="SECONDS"]</p>
+<p style="text-align: center;"> </p>
+<p style="text-align: center;">We are working very hard on the new version of our site. In the meantime <br />sign up to our newsletter and you’ll be one of the first to know when the site is ready: </p>
+<p style="text-align: center;"> </p>
+<p style="text-align: center;">[contact-form-7 id="2611" title="newsletter"]</p>

@@ -1,0 +1,58 @@
+<div class="infocolumn"><article>
+<h2 class="faqheader">What is this 'Lorem Ipsum' or 'Lorum Ipsum' stuff?</h2>
+In publishing and graphic design, placeholder text is commonly used to demonstrate the elements of a document or visual presentation, such as font, typography, and layout. Even though using "lorem ipsum" often arouses curiosity because of its resemblance to classical Latin, it is not intended to have meaning. Where text is visible in a document, people tend to focus on the textual content rather than upon overall presentation, so publishers use lorem ipsum when displaying a typeface or design elements and page layout in order to direct the focus to the publication style and not the meaning of the text. Read more at <a href="http://en.wikipedia.org/wiki/Lorem_ipsum">Wikipedia/Lorem_ipsum</a>.
+
+</article><article>
+<h2>But, aren't there already a lot of Lipsum generators out there?</h2>
+Yes, there are quite a few. Here are some examples:
+<ul>
+ 	<li><a href="http://lipsum.com/">Lipsum.com</a></li>
+ 	<li><a href="http://loremipsum.net/">Loremipsum.net</a></li>
+ 	<li><a href="http://www.lorizzle.nl/">Lorizzle</a></li>
+ 	<li><a href="http://www.fillerati.com/">Fillerati</a></li>
+ 	<li><a href="http://www.blindtextgenerator.com/lorem-ipsum">Blind Text Generator</a></li>
+ 	<li><a href="http://en.wikisource.org/wiki/Lorem_ipsum">Lorem Ipsum on Wikisource</a></li>
+</ul>
+However, all of these lack features, or are too limited:
+<ul>
+ 	<li>Customization: Most generators only output paragraphs of about the same length. Sometimes you need lists, headings, long paragraphs, short paragraphs, etc. The website/magazine that you're designing probably isn't going to be filled with uniform paragraphs, so your placeholder text should reflect that.</li>
+ 	<li>API: Loripsum.net has an API to generate placeholder text to insert it in whatever software/webapp you want. See below for details.</li>
+ 	<li>The same results, all the time: Most generators output the same results, every time you request some text. Loripsum.net uses the full text of Cicero's "De finibus bonorum et malorum" to make sure you get a different placeholder text every single time.</li>
+</ul>
+</article></div>
+<div class="infocolumn"><article>
+<h2 class="faqheader">You ask, we answer!</h2>
+<h2>Have you heard of the lorizzle gansta generator? Why don't you do that?</h2>
+Yes, we have heard of <a href="http://www.lorizzle.nl/">it</a>. It's funny, but all the 'zz's don't make the generated texts look natural. And that's the whole point.
+
+</article><article>
+<h2>Where does this text come from?</h2>
+Lorem Ipsum is placeholder text, generated randomly from Cicero's "De finibus bonorum et malorum". You can find the complete, original text here: <a href="http://www.thelatinlibrary.com/cicero/fin.shtml">thelatinlibrary.com/cicero/fin.shtml</a>.
+
+</article><article>
+<h2>Dude, you're using &lt;b&gt;-tags! Why don't you generate XHTML?</h2>
+We generate proper HTML5, because that's the way to go. Besides, the text that is affected by it is randomly selected, so it is semantically meaningless. The typographical bold and italic tags are appropriate for both HTML5 as well as XHTML.
+
+</article><article>
+<h2>What's the difference in the output if I select the 'Prude version'?</h2>
+The original text contains a few instances of words like 'sex' or 'homo'. Personally, we don't mind, because these are just common latin words meaning 'six' and 'man'. However, some people might be offended by this, so if you select the 'Prude version', these words will be censored.
+
+</article><article>
+<h2>How do I use the API?</h2>
+Just do a GET request on <a href="http://loripsum.net/api" target="_blank"><code>loripsum.net/api</code></a>, to get some placeholder text. You can add extra parameters to specify the output you're going to get. Say, you need 10 short paragraphs with headings, use <a href="http://loripsum.net/api/10/short/headers" target="_blank"><code>loripsum.net/api/10/short/headers</code></a>. All of the possible parameters are:
+<ul>
+ 	<li><b>(integer)</b> - The number of paragraphs to generate.</li>
+ 	<li><b>short</b>, <b>medium</b>, <b>long</b>, <b>verylong</b> - The average length of a paragraph.</li>
+ 	<li><b>decorate</b> - Add bold, italic and marked text.</li>
+ 	<li><b>link</b> - Add links.</li>
+ 	<li><b>ul</b> - Add unordered lists.</li>
+ 	<li><b>ol</b> - Add numbered lists.</li>
+ 	<li><b>dl</b> - Add description lists.</li>
+ 	<li><b>bq</b> - Add blockquotes.</li>
+ 	<li><b>code</b> - Add code samples.</li>
+ 	<li><b>headers</b> - Add headers.</li>
+ 	<li><b>allcaps</b> - Use ALL CAPS.</li>
+ 	<li><b>prude</b> - Prude version.</li>
+ 	<li><b>plaintext</b> - Return plain text, no HTML.</li>
+</ul>
+</article></div>

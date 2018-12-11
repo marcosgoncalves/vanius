@@ -1,0 +1,2 @@
+[ms-note type="info"]We have the following subscriptions available for our site. You can renew, cancel or upgrade your subscriptions by using the forms below.[/ms-note]
+[ms-membership-signup]

@@ -1,0 +1,5 @@
+<p><img class="alignnone size-full wp-image-3039 aligncenter" src="http://videopro.cactusthemes.com/v2/wp-content/uploads/2016/08/icon-mt.png" width="160" height="160" alt="logo-comming" /></p>
+<p>&nbsp;</p>
+<p style="text-align: center;">We are currently working on the back-end,
+our team is working hard and we’ll be back within the time.
+In the mean time you may want to see our coming soon mode by clicking <a href="#"> here.</a></p>

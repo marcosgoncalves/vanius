@@ -1,0 +1,11 @@
+------------------------
+\wp-content\plugins\cactus-actor\ct-actor.php
+------------------------
+	Criando o bloco "Integração Atlética" no cadastro da atlética.
+	Armazena no meta actor_id.
+	Select:
+		select * from for_wpposts p
+		inner join for_wppostmeta m on m.post_id  = p.ID
+		where meta_key = 'actor_id'
+		and meta_value = 7;
+------------------------

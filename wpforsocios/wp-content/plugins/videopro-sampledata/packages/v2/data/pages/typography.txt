@@ -1,0 +1,75 @@
+[vc_row css=".vc_custom_1469089038302{margin-top: 0px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column css=".vc_custom_1469089033309{margin-top: 0px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column_text css=".vc_custom_1469089058401{margin-top: 0px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"]
+<h4>Dropcaps</h4>
+[/vc_column_text][/vc_column][/vc_row][vc_row css=".vc_custom_1469088724328{margin-top: 0px !important;border-top-width: 0px !important;padding-top: 0px !important;}"][vc_column width="1/2" css=".vc_custom_1469089268672{margin-top: 10px !important;border-top-width: 0px !important;padding-top: 0px !important;}"][vc_column_text][c_dropcap]I[/c_dropcap]nteresting Stevenson and Wolfers also find, a clear role for absolute income and a more limited role for relative income comparisons in determining happiness. So stop comparing yourselves to everyone else and be happy. This is in part due to the fact that people who have children differ on average, from those who do not have children in ways that are related to happiness such as in their marital status age. Parents who are older and who have older children tend to be happier given that they are relatively more mature and financially stable. They also feel less stress, are more fun to be around, are more optimistic, and enjoy their lives more than people who are unhappy.[/vc_column_text][/vc_column][vc_column width="1/2" css=".vc_custom_1469089273434{margin-top: 10px !important;border-top-width: 0px !important;padding-top: 0px !important;}"][vc_column_text][c_dropcap]M[/c_dropcap]oney is not everything Stevenson and Wolfers also find, a clear role for absolute income and a more limited role for relative income comparisons in determining happiness. So stop comparing yourselves to everyone else and be happy. This is in part due to the fact that people who have children differ on average, from those who do not have children in ways that are related to happiness such as in their marital status age. Parents who are older and who have older children tend to be happier given that they are relatively more mature and financially stable. They also feel less stress, are more fun to be around, are more optimistic, and enjoy their lives more than people who are unhappy.[/vc_column_text][/vc_column][/vc_row][vc_row css=".vc_custom_1469089038302{margin-top: 0px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column css=".vc_custom_1469089033309{margin-top: 0px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column_text css=".vc_custom_1469089114628{margin-top: 0px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"]
+<h4>Buttons</h4>
+[/vc_column_text][/vc_column][/vc_row][vc_row css=".vc_custom_1469089899584{margin-top: 0px !important;border-top-width: 0px !important;padding-top: 0px !important;}"][vc_column width="1/6" css=".vc_custom_1469089852378{margin-top: 25px !important;border-top-width: 0px !important;padding-top: 0px !important;}"][c_button url="http://test.cactusthemes.com/videopro-v1"]Button[/c_button][/vc_column][vc_column width="1/6" css=".vc_custom_1469089860166{margin-top: 25px !important;border-top-width: 0px !important;padding-top: 0px !important;}"][c_button url="http://test.cactusthemes.com/videopro-v1"]Button[/c_button][/vc_column][vc_column width="1/6" css=".vc_custom_1469089870467{margin-top: 25px !important;border-top-width: 0px !important;padding-top: 0px !important;}"][c_button url="http://test.cactusthemes.com/videopro-v1"]Button[/c_button][/vc_column][vc_column width="1/6" css=".vc_custom_1469089877394{margin-top: 25px !important;border-top-width: 0px !important;padding-top: 0px !important;}"][c_button url="http://test.cactusthemes.com/videopro-v1"]Button[/c_button][/vc_column][vc_column width="1/6" css=".vc_custom_1469089885435{margin-top: 25px !important;border-top-width: 0px !important;padding-top: 0px !important;}"][c_button url="http://test.cactusthemes.com/videopro-v1"]Button[/c_button][/vc_column][vc_column width="1/6" css=".vc_custom_1469089893065{margin-top: 25px !important;border-top-width: 0px !important;padding-top: 0px !important;}"][c_button url="http://test.cactusthemes.com/videopro-v1"]Button[/c_button][/vc_column][/vc_row][vc_row css=".vc_custom_1469089936038{margin-top: 50px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column css=".vc_custom_1469089033309{margin-top: 0px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column_text css=".vc_custom_1469089818068{margin-top: 0px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"]
+<h4>Links</h4>
+[/vc_column_text][/vc_column][/vc_row][vc_row css=".vc_custom_1469090418450{margin-top: 0px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column width="1/2" css=".vc_custom_1469090402142{margin-top: 10px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column_text css=".vc_custom_1469090397406{margin-bottom: 0px !important;border-bottom-width: 0px !important;padding-bottom: 0px !important;}"]Harvard happiness expert <a href="#">Shawn Achor</a> says just calling, emailing or texting a friend and putting an event on the calendar is more powerful than you think. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi <a href="#">id est laborum et dolorum fuga</a>. Et harum quidem rerum facilis est et expedita distinctio. Studies show taking some time to be nostalgic increases meaning in life and gives loneliness the boot.[/vc_column_text][/vc_column][vc_column width="1/2" css=".vc_custom_1469090406087{margin-top: 10px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column_text css=".vc_custom_1469090392191{margin-bottom: 0px !important;border-bottom-width: 0px !important;padding-bottom: 0px !important;}"]Harvard happiness expert <a href="#">Shawn Achor</a> says just calling, emailing or texting a friend and putting an event on the calendar is more powerful than you think. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi <a href="#">id est laborum et dolorum fuga</a>. Et harum quidem rerum facilis est et expedita distinctio. Studies show taking some time to be nostalgic increases meaning in life and gives loneliness the boot.[/vc_column_text][/vc_column][/vc_row][vc_row css=".vc_custom_1469090485921{margin-top: 30px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column css=".vc_custom_1469089033309{margin-top: 0px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column_text css=".vc_custom_1469090197064{margin-top: 0px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"]
+<h4>Lists</h4>
+[/vc_column_text][/vc_column][/vc_row][vc_row css=".vc_custom_1469094858728{margin-top: 0px !important;margin-bottom: 20px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column width="1/2" css=".vc_custom_1469094319392{margin-top: 10px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column_text css=".vc_custom_1469094301919{margin-bottom: 0px !important;border-bottom-width: 0px !important;padding-bottom: 0px !important;}"]
+<ul>
+ 	<li>Cactus Themes Lorem ipsum dolor sit amet</li>
+ 	<li>Neque porro quisquam est qui dolorem</li>
+ 	<li>Video Theme corporis suscipit laboriosam</li>
+ 	<li>This theme is so functional</li>
+ 	<li>Just so you know this theme is awesome</li>
+</ul>
+[/vc_column_text][/vc_column][vc_column width="1/2" css=".vc_custom_1469094324635{margin-top: 10px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column_text css=".vc_custom_1469094307880{margin-bottom: 0px !important;border-bottom-width: 0px !important;padding-bottom: 0px !important;}"]
+<ol>
+ 	<li>Cactus Themes Lorem ipsum dolor sit amet</li>
+ 	<li>Neque porro quisquam est qui dolorem</li>
+ 	<li>Video Theme corporis suscipit laboriosam</li>
+ 	<li>This theme is so functional</li>
+ 	<li>Just so you know this theme is awesome</li>
+</ol>
+[/vc_column_text][/vc_column][/vc_row][vc_row css=".vc_custom_1469090485921{margin-top: 30px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column css=".vc_custom_1469089033309{margin-top: 0px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column_text css=".vc_custom_1469091147600{margin-top: 0px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"]
+<h4>Table</h4>
+[/vc_column_text][/vc_column][/vc_row][vc_row css=".vc_custom_1469088724328{margin-top: 0px !important;border-top-width: 0px !important;padding-top: 0px !important;}"][vc_column css=".vc_custom_1469092997733{margin-top: 0px !important;border-top-width: 0px !important;padding-top: 0px !important;}"][vc_column_text css=".vc_custom_1469094242775{margin-top: -25px !important;border-top-width: 0px !important;padding-top: 0px !important;}"]
+<table>
+<tbody>
+<tr>
+<th>NAME</th>
+<th>POSITIONS</th>
+<th>SKILLS</th>
+<th>EXPERIENCES</th>
+</tr>
+<tr>
+<td>Daniel Spark</td>
+<td>Web Developer</td>
+<td>Very Good</td>
+<td>3 Years</td>
+</tr>
+<tr>
+<td>Monica Grace</td>
+<td>Marketing Specialist</td>
+<td>Excellent</td>
+<td>2 Years</td>
+</tr>
+<tr>
+<td>Jenifer Storm</td>
+<td>Customer Support</td>
+<td>Very Good</td>
+<td>4 Years</td>
+</tr>
+<tr>
+<td>Cathy Abbott</td>
+<td>Mobile Developer</td>
+<td>Excellent</td>
+<td>4 Years</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row][vc_row css=".vc_custom_1465978893734{margin-top: 40px !important;}"][vc_column][vc_column_text]
+<h4>Table</h4>
+<h4>Blockquote</h4>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+<blockquote>Excepteur sint occaecat cupidatat non proident. Eleifend option congue nihil imperdiet.</blockquote>
+Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+<h4>Headings</h4>
+<h1>THIS IS H1 - 36PX</h1>
+<h2>THIS IS H2 - 32PX</h2>
+<h3>THIS IS H3 - 28PX</h3>
+<h4>THIS IS H4 - 24PX</h4>
+<h5>THIS IS H5 - 20PX</h5>
+<h6>THIS IS H6 - 20PX</h6>
+[/vc_column_text][/vc_column][/vc_row]
