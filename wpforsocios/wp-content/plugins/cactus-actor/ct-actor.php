@@ -19,6 +19,7 @@ if(!function_exists('actor_get_plugin_url')){
 class Cactus_Actor{
 	/* custom template relative url in theme, default is "ct_actor" */
 	public $template_url;
+
 	/* Plugin path */
 	public $plugin_path;
 	
@@ -26,6 +27,7 @@ class Cactus_Actor{
 	public $query;
 	
 	public function __construct() {
+
 		// constructor
 		$this->includes();
 		$this->register_configuration();
@@ -178,7 +180,8 @@ class Cactus_Actor{
 			
 			if ( ! $template ) $template = $this->plugin_path() . '/templates/' . $file;
 		}
-		return $template;		
+		
+		return $template;	
 	}
 	
 	/**
@@ -383,6 +386,21 @@ class Cactus_Actor{
 				$month_arr[$j] = $j;
 			}
 		}
+		
+		$ct_actor_integracao_atletica = array(
+			array(	'id' => 'atletica_id',
+					'name' => esc_html__('Id atlética','videopro'),
+					'type' => 'text',
+					'desc' => __('Id da atlética, igual ao retornado pela API da Forsocios', 'videopro')
+				)
+		);
+		$meta_boxes[] = array(
+			'title' => esc_html__('Integração Atlética','videopro'),
+			'pages' => 'ct_actor',
+			'fields' => $ct_actor_integracao_atletica,
+			'priority' => 'high'
+		);
+
 		$ct_actor_birthday = array(
 			array( 'id' => 'actor_bt_day',  'name' => esc_html__('Day','videopro'), 'cols' => 2, 'type' => 'select', 'options' => $day_arr , 'allow_none' => true, 'sortable' => false, 'repeatable' => false ),
 			array( 'id' => 'actor_bt_month',  'name' => esc_html__('Month','videopro'), 'cols' => 2, 'type' => 'select', 'options' => $month_arr , 'allow_none' => true, 'sortable' => false, 'repeatable' => false ),

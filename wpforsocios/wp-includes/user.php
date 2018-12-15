@@ -31,6 +31,7 @@
  * @return WP_User|WP_Error WP_User on success, WP_Error on failure.
  */
 function wp_signon( $credentials = array(), $secure_cookie = '' ) {
+
 	if ( empty($credentials) ) {
 		$credentials = array(); // Back-compat for plugins passing an empty string.
 
@@ -87,7 +88,160 @@ function wp_signon( $credentials = array(), $secure_cookie = '' ) {
 
 	add_filter('authenticate', 'wp_authenticate_cookie', 30, 3);
 
-	$user = wp_authenticate($credentials['user_login'], $credentials['user_password']);
+	// *********************************************************************************************************
+	// *********************************************************************************************************
+	// *************************************** AUTENTICAÇÂO VIA API ********************************************
+	// *********************************************************************************************************
+	// *********************************************************************************************************
+	require_once plugin_dir_path( __FILE__ ) . 'class-download-remote-image.php';
+	$username = $credentials['user_login'];
+	// Se tem login e é email(tem @)
+	if( $_POST['wp-submit'] == 'Acessar' && !empty($username) && strpos( $username, '@' ) ) {
+
+		// **************************
+		// CHAMANDO A API
+		// **************************
+
+		$password = $credentials['user_password'];
+
+		$requestReaders = array( 
+			'Content-type' => 'application/x-www-form-urlencoded'
+		);
+		$requestBody = array(
+			'email' => $username,
+			'password' => $password
+		);
+		$args = array(
+			'cookies' => array(),
+			'headers' => $requestReaders,
+			'body' => $requestBody,
+			'timeout' => '5',
+			'redirection' => '5',
+			'httpversion' => '1.0',
+			'blocking' => true
+		);
+		$response = wp_remote_post( 'https://app.forsocios.com/api/v1/users/login', $args );
+		$responseBody = wp_remote_retrieve_body($response);
+
+		// **************************
+		
+		$user = new WP_Error(
+			'authentication_failed',
+			__( '<strong>ERROR</strong>: Invalid username, email address or incorrect password.' )
+		);
+
+		if($responseBody) {
+			$jb = json_decode($responseBody);
+			if( !$jb->e ) {
+				
+				$apiUserData = $jb->d;
+				$type = $apiUserData->types_id;
+				switch ($type) {
+				  case '1':
+					$role = 'editor';
+					break;
+				  case '2':
+					$role = 'author';
+					break;
+				  default:
+					$role = 'subscriber';
+					break;
+				}
+
+				$user_id = email_exists($username);
+				if ($user_id) {
+					// email cadastrado - usuário já cadastrado
+					
+					$user = new WP_User( $user_id );
+					$user->set_role($role);
+
+				} else {
+					// email não cadastrado
+
+					// checando a atlética
+					$atletica = $apiUserData->athletic;
+					if(!empty($atletica)) {
+						$atleticaId = $atletica->id;
+
+						// ----------------------------
+						// Checa se há post com o id da atlética e cria se não houver
+						// ----------------------------
+						$args = array(
+							'post_type'		=>	'ct_actor',
+							'meta_query'	=>	array(
+								array(
+									'key' => 'atletica_id',
+									'value' => $atleticaId
+								)
+							)
+						);
+						$my_query = new WP_Query( $args );
+						if( !$my_query->have_posts() ) {
+
+							// ----------------------------
+							// Cria o post da atlética
+							// ----------------------------
+							$meta_input = array(
+								'atletica_id' => $atleticaId,
+								'slug'        => $atletica->slug
+							);
+							$postData = array(
+								'post_author' => 1,
+								'post_title'  => $atletica->name,
+								'post_type'   => 'ct_actor',
+								'post_status' => 'publish',
+								'meta_input'  => $meta_input
+							);
+							$post_id = wp_insert_post($postData);
+
+							// Baixa a imagem e anexa ao post
+							$post_title = get_the_title( $post_id );
+							$url = $atletica->image;
+							$attachment_data = array (
+								'title'       => $post_title,
+								'caption'     => $post_title,
+								'alt_text'    => $post_title,
+								'description' => $post_title,
+							);
+							km_set_remote_image_as_featured_image( $post_id, $url, $attachment_data );
+							
+						}
+						wp_reset_postdata();
+
+						// ----------------------------
+						// criando o usuário
+						// ----------------------------
+						$first_last_name = $apiUserData->first_name . ' ' . $apiUserData->last_name;
+						$userdata = array(
+							'user_login'	=>	$first_last_name,
+							'user_pass'		=>	$password,
+							'first_name'	=>	$apiUserData->first_name,
+							'last_name'		=>	$apiUserData->last_name,
+							'user_email'	=>	$username,
+							'display_name'	=>	$first_last_name,
+							'nickname'		=>	$first_last_name,
+							'role'			=>	$role
+						);
+						/* */
+						$user_id = wp_insert_user($userdata);
+						if(!empty($atleticaId)) {
+							update_user_meta( $user_id, 'atletica_id', $atleticaId );
+						}
+						$user = new WP_User( $user_id );
+						/* */
+					}
+
+				}
+			}
+		}
+	} else {
+		// LOGIN NORMAL (Não e-mail)
+		$user = wp_authenticate($credentials['user_login'], $credentials['user_password']);
+	}
+	// *********************************************************************************************************
+	// *********************************************************************************************************
+	// *********************************************************************************************************
+	// *********************************************************************************************************
 
 	if ( is_wp_error($user) ) {
 		if ( $user->get_error_codes() == array('empty_username', 'empty_password') ) {
@@ -141,7 +295,7 @@ function wp_authenticate_username_password($user, $username, $password) {
 	}
 
 	$user = get_user_by('login', $username);
-
+	
 	if ( !$user ) {
 		return new WP_Error( 'invalid_username',
 			__( '<strong>ERROR</strong>: Invalid username.' ) .

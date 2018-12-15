@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['integration'])){
-
+  /*
   $data = $_POST['integration'];
   $user = $data['first_name'];
   $pass = $_POST['pass'];
@@ -24,6 +24,7 @@ if(isset($_POST['integration'])){
           echo 1;die;
   }
   echo 0;	die;
+  */
  }
 
  function integration($user, $email){
@@ -43,7 +44,7 @@ $(document).ready(function(){
 	var pass = '<?php echo $email ?>';
 
 	if(email!==''){
-    $('body').hide();
+    // $('body').hide();
 		$.ajax({
 			'url': api,
 			'method': method,
