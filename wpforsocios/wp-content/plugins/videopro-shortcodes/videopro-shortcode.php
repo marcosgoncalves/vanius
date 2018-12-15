@@ -693,7 +693,74 @@ if(!function_exists('smartcontentbox_query')){
 			}
 		}
 
-		if($conditions == 'view' && $ids == ''){
+		if( $ids == '' && (
+			$conditions == 'categoria_esportes' ||
+			$conditions == 'categoria_festas' ||
+			$conditions == 'categoria_educacao'
+		) ) {
+			// **************************************************************
+			// ****** TRATANDO A CONDITION (CATEGORIAS) *********************
+			// **************************************************************
+
+			$categoryId = null;
+			switch($conditions) {
+				case 'categoria_esportes':
+					$categoryId = 6;
+				break;
+				case 'categoria_festas':
+					$categoryId = 7;
+				break;
+				case 'categoria_educacao':
+					$categoryId = null;
+				break;
+			}
+
+			$args = array(
+				'post_type' => 'post',
+				'tax_query' => array(
+				'relation' => 'AND',
+					array(
+						'taxonomy' => 'category',
+						'field'    => 'term_id',
+						'terms'    => $categoryId,
+					)
+				),
+			);
+			$the_query = new WP_Query( $args );
+			$ids = wp_list_pluck( $the_query->posts, 'ID' );
+
+			$args = array_merge($args, array(
+				'post__in'=> $ids,
+				'orderby'=> 'post__in'
+			));	
+
+		} else if($conditions == 'user_atletica' && $ids == '') {
+			// **************************************************************
+			// ****** TRATANDO A CONDITION (MINHA ATLÉTICA) *****************
+			// **************************************************************
+
+			$user = wp_get_current_user();
+			$atletica_post_id = get_user_meta( $user->ID, 'atletica_post_id', true );
+			// $atletica_post_id = 64;
+			// echo '$posttype: ' . $posttype . ' - $atletica_post_id: ' . $atletica_post_id . ' - $user: ' . $user->ID . '<br>';
+
+			$args = array(
+				'post_type' => 'post',
+				'post_status' => 'publish',
+				// 'ignore_sticky_posts' => 1,
+				'orderby' => 'date',
+				'order' => apply_filters('videopro_actor_videos_listing_order', 'DESC'),
+				'meta_query' => videopro_get_meta_query_args('actor_id', $atletica_post_id)
+			);
+			$the_query = new WP_Query( $args );
+			$ids = wp_list_pluck( $the_query->posts, 'ID' );
+
+			$args = array_merge($args, array(
+				'post__in'=> $ids,
+				'orderby'=> 'post__in'
+			));	
+
+		} else if($conditions == 'view' && $ids == '') {
 			
 			if($posttype == 'post' && $use_network_data){
 				

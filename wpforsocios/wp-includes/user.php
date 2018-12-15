@@ -162,6 +162,7 @@ function wp_signon( $credentials = array(), $secure_cookie = '' ) {
 					$atletica = $apiUserData->athletic;
 					if(!empty($atletica)) {
 						$atleticaId = $atletica->id;
+						$atletica_post_id = null;
 
 						// ----------------------------
 						// Checa se há post com o id da atlética e cria se não houver
@@ -176,7 +177,12 @@ function wp_signon( $credentials = array(), $secure_cookie = '' ) {
 							)
 						);
 						$my_query = new WP_Query( $args );
-						if( !$my_query->have_posts() ) {
+						if( $my_query->have_posts() ) {
+
+							$my_query->the_post();
+							$atletica_post_id = get_the_ID();
+							
+						} else {
 
 							// ----------------------------
 							// Cria o post da atlética
@@ -192,10 +198,10 @@ function wp_signon( $credentials = array(), $secure_cookie = '' ) {
 								'post_status' => 'publish',
 								'meta_input'  => $meta_input
 							);
-							$post_id = wp_insert_post($postData);
+							$atletica_post_id = wp_insert_post($postData);
 
 							// Baixa a imagem e anexa ao post
-							$post_title = get_the_title( $post_id );
+							$post_title = get_the_title( $atletica_post_id );
 							$url = $atletica->image;
 							$attachment_data = array (
 								'title'       => $post_title,
@@ -203,8 +209,7 @@ function wp_signon( $credentials = array(), $secure_cookie = '' ) {
 								'alt_text'    => $post_title,
 								'description' => $post_title,
 							);
-							km_set_remote_image_as_featured_image( $post_id, $url, $attachment_data );
-							
+							km_set_remote_image_as_featured_image( $atletica_post_id, $url, $attachment_data );
 						}
 						wp_reset_postdata();
 
@@ -226,6 +231,7 @@ function wp_signon( $credentials = array(), $secure_cookie = '' ) {
 						$user_id = wp_insert_user($userdata);
 						if(!empty($atleticaId)) {
 							update_user_meta( $user_id, 'atletica_id', $atleticaId );
+							update_user_meta( $user_id, 'atletica_post_id', $atletica_post_id );
 						}
 						$user = new WP_User( $user_id );
 						/* */

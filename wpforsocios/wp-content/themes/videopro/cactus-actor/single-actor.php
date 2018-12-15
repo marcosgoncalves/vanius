@@ -140,6 +140,7 @@ $videopro_layout = videopro_global_layout();
                         <div class="single-divider"></div>
                         <?php 
 						$paged = get_query_var('paged') ? get_query_var('paged') : (get_query_var('page') ? get_query_var('page'):1);
+
 						$args = array(
 							'post_type' => 'post',
 							'paged' => $paged,

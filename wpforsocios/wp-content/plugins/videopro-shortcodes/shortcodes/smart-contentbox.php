@@ -155,6 +155,22 @@ add_shortcode('scb_filter_tags', 'videopro_smart_contentbox_filter_tags');
 
 
 function videopro_smart_contentbox($atts, $content = null) {
+	
+	// **************************************************************
+	// ****** TRATANDO A CONDITION (MINHA ATLÉTICA) *****************
+	// **************************************************************
+	if($atts['condition'] === 'user_atletica') {
+		$user = wp_get_current_user();
+		if(empty($user->ID)) {
+			return '';
+		}
+		$atletica_id = get_user_meta( $user->ID, 'atletica_id', true );
+		if(empty($atletica_id)) {
+			return '';
+		}
+	}
+	// **************************************************************
+	
 	$content = str_replace('<br class="nc" />', '', $content);
     $output_id                  = isset($atts['id']) && $atts['id'] != '' ? $atts['id'] : rand(1,500);
     $title          = isset($atts['title']) ? $atts['title'] : '';  
@@ -437,7 +453,12 @@ function reg_ctscb(){
 						esc_html__("Commentarios - ordem por posts mais comentados","videopro")=>'comment',
 						esc_html__("Avaliação - ordem por posts melhor avaliados","videopro")=>'high_rated',
 						esc_html__("Titulo - ordem alfabética", "videopro") => "title",
-                        esc_html__("Random", "videopro") => "random"),
+                        esc_html__("Random", "videopro") => "random",
+						esc_html__("Minha Atlética", "videopro") => "user_atletica",
+						esc_html__("Categoria Esportes", "videopro") => "categoria_esportes",
+						esc_html__("Categoria Festas", "videopro") => "categoria_festas",
+						esc_html__("Categoria Educação", "videopro") => "categoria_educacao"
+					),
 					"description" => esc_html__("condition to query items", "videopro"),
                     "dependency" => array(
                         "element" => "posttype",
