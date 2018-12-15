@@ -29,7 +29,7 @@ function custom_login_logo() {
 add_action('login_head', 'custom_login_logo');
 
 
-
+/*
 require 'integration.php';
 function custom_login() {
 
@@ -44,6 +44,7 @@ function custom_login() {
 }
 // run it before the headers and cookies are sent
 add_action( 'login_enqueue_scripts', 'custom_login' );
+*/
 
 
 /**
