@@ -715,7 +715,7 @@ if(!function_exists('smartcontentbox_query')){
 				break;
 			}
 
-			$args = array(
+			$qryArgs = array(
 				'post_type' => 'post',
 				'tax_query' => array(
 				'relation' => 'AND',
@@ -726,7 +726,7 @@ if(!function_exists('smartcontentbox_query')){
 					)
 				),
 			);
-			$the_query = new WP_Query( $args );
+			$the_query = new WP_Query( $qryArgs );
 			$ids = wp_list_pluck( $the_query->posts, 'ID' );
 
 			$args = array_merge($args, array(
@@ -744,7 +744,7 @@ if(!function_exists('smartcontentbox_query')){
 			// $atletica_post_id = 64;
 			// echo '$posttype: ' . $posttype . ' - $atletica_post_id: ' . $atletica_post_id . ' - $user: ' . $user->ID . '<br>';
 
-			$args = array(
+			$qryArgs = array(
 				'post_type' => 'post',
 				'post_status' => 'publish',
 				// 'ignore_sticky_posts' => 1,
@@ -752,7 +752,7 @@ if(!function_exists('smartcontentbox_query')){
 				'order' => apply_filters('videopro_actor_videos_listing_order', 'DESC'),
 				'meta_query' => videopro_get_meta_query_args('actor_id', $atletica_post_id)
 			);
-			$the_query = new WP_Query( $args );
+			$the_query = new WP_Query( $qryArgs );
 			$ids = wp_list_pluck( $the_query->posts, 'ID' );
 
 			$args = array_merge($args, array(
